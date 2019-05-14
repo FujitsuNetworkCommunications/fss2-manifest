@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <default remote="yocto" revision="daisy"/>
+  <default remote="yocto" revision="pyro"/>
 
   <!-- You can have as many remote repositories as you like -->
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
@@ -13,16 +13,14 @@
        "path": directory where git repository gets cloned/synced -->
   
   <project name="poky" remote="yocto" />
-  <project name="meta-openembedded" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-fsl-ppc" remote="yocto" path="poky/meta-fsl-ppc" />
+  <project name="meta-freescale" remote="yocto" path="poky/meta-freescale" />
   <project name="FujitsuNetworkCommunications/meta-fss2-ppc" remote="github" revision="master" path="poky/meta-fss2-ppc" />
 
   <project name="FujitsuNetworkCommunications/meta-fss2-linux" remote="github" revision="master" path="poky/meta-fss2-linux" >
-	  <copyfile dest="poky/.templateconf" src=".templateconf" />
-	  <copyfile dest="poky/fss2-init-build-env" src="init/fss2-init-build-env" />
-      <linkfile dest="poky/patches" src="patches" />
+      <copyfile src="scripts/fss2-init-build-env" dest="poky/fss2-init-build-env" />
+      <copyfile src="conf/bblayers.conf.sample" dest="poky/meta-poky/conf/bblayers.conf.sample" />
+      <copyfile src="conf/conf-notes.txt" dest="poky/meta-poky/conf/conf-notes.txt" />
+      <copyfile src="conf/local.conf.sample" dest="poky/meta-poky/conf/local.conf.sample" />
   </project>
-
-
 
 </manifest>
