@@ -11,18 +11,16 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  
+
   <project name="poky" remote="yocto" />
-  <project name="meta-openembedded" remote="oe" path="poky/meta-openembedded" />
   <project name="meta-fsl-ppc" remote="yocto" path="poky/meta-fsl-ppc" />
   <project name="FujitsuNetworkCommunications/meta-fss2-ppc" remote="github" revision="master" path="poky/meta-fss2-ppc" />
 
   <project name="FujitsuNetworkCommunications/meta-fss2-linux" remote="github" revision="master" path="poky/meta-fss2-linux" >
-	  <copyfile dest="poky/.templateconf" src=".templateconf" />
-	  <copyfile dest="poky/fss2-init-build-env" src="init/fss2-init-build-env" />
-      <linkfile dest="poky/patches" src="patches" />
+      <copyfile src="scripts/fss2-init-build-env.daisy" dest="poky/fss2-init-build-env" />
+      <copyfile src="conf/bblayers.conf.sample.daisy" dest="poky/meta-yocto/conf/bblayers.conf.sample" />
+      <copyfile src="conf/conf-notes.txt" dest="poky/meta-yocto/conf/conf-notes.txt" />
+      <copyfile src="conf/local.conf.sample" dest="poky/meta-yocto/conf/local.conf.sample" />
   </project>
-
-
 
 </manifest>
