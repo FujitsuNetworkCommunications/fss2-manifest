@@ -103,6 +103,16 @@ source poky/fss2-init-build-env -m t600
 bitbake core-image-minimal
 ```
 
+#### T700 PPC target
+```sh
+cd
+mkdir working_dir
+cd working_dir
+repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro
+repo sync
+source poky/fss2-init-build-env -m 700
+bitbake core-image-minimal
+```
 
 License
 ----
