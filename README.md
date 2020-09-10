@@ -86,7 +86,7 @@ git config --global user.email "you@email.com"
 cd
 mkdir working_dir
 cd working_dir
-repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro
+repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro-20.1
 repo sync
 source poky/fss2-init-build-env
 bitbake core-image-minimal
@@ -97,7 +97,7 @@ bitbake core-image-minimal
 cd
 mkdir working_dir
 cd working_dir
-repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro
+repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro-20.1
 repo sync
 source poky/fss2-init-build-env -m t600
 bitbake core-image-minimal
@@ -108,7 +108,7 @@ bitbake core-image-minimal
 cd
 mkdir working_dir
 cd working_dir
-repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro
+repo init -u https://github.com/FujitsuNetworkCommunications/fss2-manifest -b pyro-20.1
 repo sync
 source poky/fss2-init-build-env -m 700
 bitbake core-image-minimal
