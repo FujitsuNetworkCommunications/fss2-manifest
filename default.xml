@@ -14,9 +14,9 @@
   
   <project name="poky" remote="yocto" />
   <project name="meta-freescale" remote="yocto" path="poky/meta-freescale" />
-  <project name="FujitsuNetworkCommunications/meta-fss2-ppc" remote="github" revision="master" path="poky/meta-fss2-ppc" />
+  <project name="FujitsuNetworkCommunications/meta-fss2-ppc" remote="github" revision="pyro-20.1" path="poky/meta-fss2-ppc" />
 
-  <project name="FujitsuNetworkCommunications/meta-fss2-linux" remote="github" revision="master" path="poky/meta-fss2-linux" >
+  <project name="FujitsuNetworkCommunications/meta-fss2-linux" remote="github" revision="pyro-20.1" path="poky/meta-fss2-linux" >
       <copyfile src="scripts/fss2-init-build-env" dest="poky/fss2-init-build-env" />
       <copyfile src="conf/bblayers.conf.sample" dest="poky/meta-poky/conf/bblayers.conf.sample" />
       <copyfile src="conf/conf-notes.txt" dest="poky/meta-poky/conf/conf-notes.txt" />
